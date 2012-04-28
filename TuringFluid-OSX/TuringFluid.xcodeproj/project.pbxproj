@@ -119,7 +119,6 @@
 		00E7808214F322B000FC4550 /* GHGLProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHGLProgram.m; sourceTree = "<group>"; };
 		00E7808314F322B000FC4550 /* GHGLTexture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHGLTexture.h; sourceTree = "<group>"; };
 		00E7808414F322B000FC4550 /* GHGLTexture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHGLTexture.m; sourceTree = "<group>"; };
-		00E7808514F322B000FC4550 /* GHGLUCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHGLUCommon.h; sourceTree = "<group>"; };
 		00E7808614F322B000FC4550 /* GHGLUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHGLUtils.h; sourceTree = "<group>"; };
 		00E7808714F322B000FC4550 /* GHGLUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHGLUtils.m; sourceTree = "<group>"; };
 		00E7808814F322B000FC4550 /* GHQuaternion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHQuaternion.h; sourceTree = "<group>"; };
@@ -268,7 +267,6 @@
 				00E7808214F322B000FC4550 /* GHGLProgram.m */,
 				00E7808314F322B000FC4550 /* GHGLTexture.h */,
 				00E7808414F322B000FC4550 /* GHGLTexture.m */,
-				00E7808514F322B000FC4550 /* GHGLUCommon.h */,
 				00E7808614F322B000FC4550 /* GHGLUtils.h */,
 				00E7808714F322B000FC4550 /* GHGLUtils.m */,
 				00E7808814F322B000FC4550 /* GHQuaternion.h */,

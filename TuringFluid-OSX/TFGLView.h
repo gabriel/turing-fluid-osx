@@ -14,9 +14,13 @@
   CVDisplayLinkRef _displayLink;
   CGDirectDisplayID	_viewDisplayID;
 
-  CGPoint _mouse[16];
-  CGPoint _mouseD[16];
-  CGPoint _oldMouse[16];
+  CGPoint _mouseKinect[16];
+  CGPoint _mouseDKinect[16];
+  CGPoint _oldMouseKinect[16];
+  
+  CGPoint _mouse;
+  CGPoint _mouseD;
+  CGPoint _oldMouse;
   
   TFShader *_shader;
   //TFFluidShader *_shader;

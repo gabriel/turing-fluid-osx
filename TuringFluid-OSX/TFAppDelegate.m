@@ -15,7 +15,8 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)notification {
   [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(windowWillCloseNotification:) name:NSWindowWillCloseNotification object:nil];
   [_GLView start];
-  [self toggleFullScreen:nil];
+  
+  //[self toggleFullScreen:nil];
 }
 
 - (IBAction)toggleFullScreen:(id)sender {

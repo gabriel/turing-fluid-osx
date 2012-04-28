@@ -101,29 +101,41 @@ static CVReturn DisplayLinkCallback(CVDisplayLinkRef displayLink, const CVTimeSt
   CGLLockContext(contextObj);
 	
 	[[self openGLContext] makeCurrentContext];
-    
-  [self _openNI];
   
-  Vector2D mouseToUse = {0, 0};
-  Vector2D mouseDToUse = {0, 0};
-
-  for (int i = 0; i < 16; i++) {
-    Vector2D mouse = { _mouse[i].x, _mouse[i].y };
-    Vector2D mouseD = { _mouseD[i].x, _mouseD[i].y };
-    Vector2D oldMouse = { _oldMouse[i].x, _oldMouse[i].y };
-
-    if (oldMouse.x != 0 && oldMouse.y != 0) {
-      mouseD.x = (mouse.x - oldMouse.x) * self.frame.size.width;
-      mouseD.y = (mouse.y - oldMouse.y) * self.frame.size.height;
-    }
+  if (IsOpenNIEnabled) {
+    [self _openNI];
     
-    if (Vector2DDistance(mouseD, mouse) > Vector2DDistance(mouseDToUse, mouseToUse)) {
-      mouseToUse = mouse;
-      mouseDToUse = mouseD;
+    Vector2D mouseToUse = {0, 0};
+    Vector2D mouseDToUse = {0, 0};
+
+    for (int i = 0; i < 16; i++) {
+      Vector2D mouse = { _mouseKinect[i].x, _mouseKinect[i].y };
+      Vector2D mouseD = { _mouseDKinect[i].x, _mouseDKinect[i].y };
+      Vector2D oldMouse = { _oldMouseKinect[i].x, _oldMouseKinect[i].y };
+
+      if (oldMouse.x != 0 && oldMouse.y != 0) {
+        mouseD.x = (mouse.x - oldMouse.x) * self.frame.size.width;
+        mouseD.y = (mouse.y - oldMouse.y) * self.frame.size.height;
+      }
+      
+      if (Vector2DDistance(mouseD, mouse) > Vector2DDistance(mouseDToUse, mouseToUse)) {
+        mouseToUse = mouse;
+        mouseDToUse = mouseD;
+      }
+    }
+    _shader.mouse = CGPointMake(mouseToUse.x, mouseToUse.y);
+    _shader.mouseD = CGPointMake(mouseDToUse.x, mouseDToUse.y);
+  } else {
+    if (_oldMouse.x != 0 && _oldMouse.y != 0) {
+      _mouseD.x = (_mouse.x - _oldMouse.x) * self.frame.size.width;
+      _mouseD.y = (_mouse.y - _oldMouse.y) * self.frame.size.height;
+    }
+    _shader.mouse = _mouse;
+    _shader.mouseD = _mouseD;
+    if (_mouseD.x > 0 || _mouseD.y > 0) {
+      NSLog(@"Debug %0.1f, %0.1f", _mouseD.x, _mouseD.y);
     }
   }
-  _shader.mouse = CGPointMake(mouseToUse.x, mouseToUse.y);
-  _shader.mouseD = CGPointMake(mouseDToUse.x, mouseDToUse.y);
   
   [_shader draw];
   
@@ -137,12 +149,12 @@ static CVReturn DisplayLinkCallback(CVDisplayLinkRef displayLink, const CVTimeSt
 
 - (void)mouseDragged:(NSEvent *)event {
   NSPoint p = [event locationInWindow];
-  _oldMouse[0] = _mouse[0];
-  _mouse[0] = CGPointMake(p.x / self.frame.size.width, p.y / self.frame.size.height);
+  _oldMouse = _mouse;
+  _mouse = CGPointMake(p.x / self.frame.size.width, p.y / self.frame.size.height);
 }
 
 - (void)mouseUp:(NSEvent *)event {
-  _oldMouse[0] = _mouse[0];
+  _oldMouse = _mouse;
 }
 
 - (BOOL)_openNI {
@@ -178,16 +190,16 @@ static CVReturn DisplayLinkCallback(CVDisplayLinkRef displayLink, const CVTimeSt
     
     for (int i = 0; i < 16; i++) {
       if (locations[i].X != -1) {
-        _oldMouse[i] = _mouse[i];
+        _oldMouseKinect[i] = _mouseKinect[i];
         
         // Translate
         locations[i].Y = (-locations[i].Y + 480);
         locations[i].Y *= 2;
         
-        _mouse[i] = CGPointMake(locations[i].X / 640, locations[i].Y / 480);
+        _mouseKinect[i] = CGPointMake(locations[i].X / 640, locations[i].Y / 480);
       } else {
-        _oldMouse[i] = _mouse[i];
-        _mouse[i] = CGPointZero;
+        _oldMouseKinect[i] = _mouseKinect[i];
+        _mouseKinect[i] = CGPointZero;
       }
     }
   }

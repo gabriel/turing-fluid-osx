@@ -23,8 +23,8 @@
 	GHGLProgram *_progFluidP;
 	GHGLProgram *_progFluidDiv;
   
-  //GHGLProgram *_progBlurHorizontal;
-	//GHGLProgram *_progBlurVertical;
+  GHGLProgram *_progBlurHorizontal;
+	GHGLProgram *_progBlurVertical;
   
   GLuint _frameBuffers[2];
   GLuint _fluidPFrameBuffer;
@@ -32,8 +32,8 @@
   GLuint _fluidStoreFrameBuffer;
   GLuint _fluidBackBuffer;
   
-  //GLuint _helperFrameBuffers[6];
-  //GLuint _blurFrameBuffers[6];
+  GLuint _helperFrameBuffers[6];
+  GLuint _blurFrameBuffers[6];
   
   GLuint _textureMainN;
   GLuint _textureMain2N;
@@ -45,8 +45,8 @@
   GLuint _textureFluidStore;
   GLuint _textureFluidBackBuffer;
   
-  //GLuint _textureHelper[6];
-  //GLuint _textureBlur[6];
+  GLuint _textureHelper[6];
+  GLuint _textureBlur[6];
   
   GLuint _verticesID;
   

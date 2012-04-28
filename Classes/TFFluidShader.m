@@ -81,7 +81,6 @@
   glFlush();
 }
 
-/*
 - (void)calculateBlurTexture:(GLuint)sourceTex targetTex:(GLuint)targetTex targetFBO:(GLuint)targetFBO helperTex:(GLuint)helperTex helperFBO:(GLuint)helperFBO scale:(GLfloat)scale {
   // copy source
   glViewport(0, 0, SizeX / scale, SizeY / scale);
@@ -122,15 +121,14 @@
   [self calculateBlurTexture:_textureBlur[3] targetTex:_textureBlur[4] targetFBO:_blurFrameBuffers[4] helperTex:_textureHelper[4] helperFBO:_helperFrameBuffers[4] scale:16.0f];
   [self calculateBlurTexture:_textureBlur[4] targetTex:_textureBlur[5] targetFBO:_blurFrameBuffers[5] helperTex:_textureHelper[5] helperFBO:_helperFrameBuffers[5] scale:32.0f];
 }
- */
 
 - (BOOL)loadShaders {
   _prog = [[self programForShaderName:@"Shader-Default"] retain];
   _progCopy = [[self programForShaderName:@"Shader-Copy"] retain];
   _progComposite = [[self programForShaderName:@"Shader-DefaultComposite"] retain];
   
-  //_progBlurHorizontal = [[self programForShaderName:@"Shader-BlurHorizontal"] retain];
-  //_progBlurVertical = [[self programForShaderName:@"Shader-BlurVertical"] retain];
+  _progBlurHorizontal = [[self programForShaderName:@"Shader-BlurHorizontal"] retain];
+  _progBlurVertical = [[self programForShaderName:@"Shader-BlurVertical"] retain];
   
   _progFluidInit = [[self programForShaderName:@"Shader-FluidInit"] retain];
   _progFluidAddMotion = [[self programForShaderName:@"Shader-FluidAddMotion"] retain];
@@ -173,13 +171,11 @@
   
   NSMutableData *pixels = [NSMutableData data];
   NSMutableData *simPixels = [NSMutableData data];
-  /*
   NSMutableData *pixels2 = [NSMutableData data];
   NSMutableData *pixels3 = [NSMutableData data];
   NSMutableData *pixels4 = [NSMutableData data];
   NSMutableData *pixels5 = [NSMutableData data];
   NSMutableData *pixels6 = [NSMutableData data];
-   */
 
   for (int i = 0; i < SizeY; i++) {
     for (int j = 0; j < SizeX; j++) {
@@ -193,7 +189,6 @@
     }
   }
   
-  /*
   for (int i = 0; i < SizeX; i++) {
     for (int j = 0; j < SizeY; j++) {
     
@@ -219,7 +214,6 @@
       }
     }
   }
-   */
   
   glGenFramebuffers(2, _frameBuffers);
   [self createAndBindTexture:&_textureMainN pixels:pixels scale:1.0f fbo:_frameBuffers[0] filter:GL_NEAREST];
@@ -237,7 +231,6 @@
   [self createAndBindSimulationTexture:&_textureFluidStore pixels:simPixels fbo:_fluidStoreFrameBuffer];
   [self createAndBindSimulationTexture:&_textureFluidBackBuffer pixels:simPixels fbo:_fluidBackBuffer];
   
-  /*
   glGenFramebuffers(6, _helperFrameBuffers);  
   [self createAndBindTexture:&_textureHelper[0] pixels:pixels scale:1.0f fbo:_helperFrameBuffers[0] filter:GL_NEAREST];
   [self createAndBindTexture:&_textureHelper[1] pixels:pixels2 scale:2.0f fbo:_helperFrameBuffers[1] filter:GL_NEAREST];
@@ -266,7 +259,6 @@
   glBindTexture(GL_TEXTURE_2D, _textureBlur[4]);
   glActiveTexture(GL_TEXTURE7); 
   glBindTexture(GL_TEXTURE_2D, _textureBlur[5]);
-   */
 
   glActiveTexture(GL_TEXTURE10); 
   glBindTexture(GL_TEXTURE_2D, _textureFluidV);
@@ -282,7 +274,7 @@
   _frameCounter = 0;
   _frameTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(_timer) userInfo:nil repeats:YES];
   
-  //[self calculateBlurTextures];
+  [self calculateBlurTextures];
   
   [self fluidInit:_fluidVFrameBuffer];
   [self fluidInit:_fluidPFrameBuffer];
