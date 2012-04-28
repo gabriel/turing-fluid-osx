@@ -1,0 +1,528 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		000D82C814EB7FD000FE23D9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 000D82C714EB7FD000FE23D9 /* Cocoa.framework */; };
+		000D831C14EB883D00FE23D9 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 000D831B14EB883D00FE23D9 /* OpenGL.framework */; };
+		000D831E14EB884F00FE23D9 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 000D831D14EB884F00FE23D9 /* CoreVideo.framework */; };
+		0030305614F75ECD00A339F3 /* CocoaOpenNI.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0030305114F75ECC00A339F3 /* CocoaOpenNI.mm */; };
+		0030305714F75ECD00A339F3 /* SceneDrawer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0030305314F75ECC00A339F3 /* SceneDrawer.mm */; };
+		0030305814F75ECD00A339F3 /* Shared.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0030305414F75ECC00A339F3 /* Shared.cpp */; };
+		0030305B14F75F2B00A339F3 /* Config.xml in Resources */ = {isa = PBXBuildFile; fileRef = 0030305A14F75F2B00A339F3 /* Config.xml */; };
+		0030305D14F75F7D00A339F3 /* libOpenNI.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0030305C14F75F7D00A339F3 /* libOpenNI.dylib */; };
+		0030305F14F75FEB00A339F3 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0030305E14F75FEB00A339F3 /* GLUT.framework */; };
+		00CAF53714F74B100066B64F /* TFGLView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 00CAF53414F74B100066B64F /* TFGLView.mm */; };
+		00CAF53814F74B100066B64F /* TFAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 00CAF53614F74B100066B64F /* TFAppDelegate.m */; };
+		00CAF54B14F74B350066B64F /* Include.fs in Sources */ = {isa = PBXBuildFile; fileRef = 00CAF53A14F74B350066B64F /* Include.fs */; };
+		00CAF54C14F74B350066B64F /* Shader-Advance.fs in Sources */ = {isa = PBXBuildFile; fileRef = 00CAF53B14F74B350066B64F /* Shader-Advance.fs */; };
+		00CAF54D14F74B350066B64F /* Shader-Advance2.fs in Sources */ = {isa = PBXBuildFile; fileRef = 00CAF53C14F74B350066B64F /* Shader-Advance2.fs */; };
+		00CAF54E14F74B350066B64F /* Shader-BlurHorizontal.fs in Sources */ = {isa = PBXBuildFile; fileRef = 00CAF53D14F74B350066B64F /* Shader-BlurHorizontal.fs */; };
+		00CAF54F14F74B350066B64F /* Shader-BlurVertical.fs in Sources */ = {isa = PBXBuildFile; fileRef = 00CAF53E14F74B350066B64F /* Shader-BlurVertical.fs */; };
+		00CAF55014F74B350066B64F /* Shader-Composite.fs in Sources */ = {isa = PBXBuildFile; fileRef = 00CAF53F14F74B350066B64F /* Shader-Composite.fs */; };
+		00CAF55114F74B350066B64F /* Shader-Composite2.fs in Sources */ = {isa = PBXBuildFile; fileRef = 00CAF54014F74B350066B64F /* Shader-Composite2.fs */; };
+		00CAF55214F74B350066B64F /* Shader-Composite3.fs in Sources */ = {isa = PBXBuildFile; fileRef = 00CAF54114F74B350066B64F /* Shader-Composite3.fs */; };
+		00CAF55314F74B350066B64F /* Shader-Copy.fs in Sources */ = {isa = PBXBuildFile; fileRef = 00CAF54214F74B350066B64F /* Shader-Copy.fs */; };
+		00CAF55414F74B350066B64F /* Shader-FluidAddMotion.fs in Sources */ = {isa = PBXBuildFile; fileRef = 00CAF54314F74B350066B64F /* Shader-FluidAddMotion.fs */; };
+		00CAF55514F74B350066B64F /* Shader-FluidAdvect.fs in Sources */ = {isa = PBXBuildFile; fileRef = 00CAF54414F74B350066B64F /* Shader-FluidAdvect.fs */; };
+		00CAF55614F74B350066B64F /* Shader-FluidDiv.fs in Sources */ = {isa = PBXBuildFile; fileRef = 00CAF54514F74B350066B64F /* Shader-FluidDiv.fs */; };
+		00CAF55714F74B350066B64F /* Shader-FluidInit.fs in Sources */ = {isa = PBXBuildFile; fileRef = 00CAF54614F74B350066B64F /* Shader-FluidInit.fs */; };
+		00CAF55814F74B350066B64F /* Shader-FluidP.fs in Sources */ = {isa = PBXBuildFile; fileRef = 00CAF54714F74B350066B64F /* Shader-FluidP.fs */; };
+		00CAF55914F74B350066B64F /* Shader-Test.fs in Sources */ = {isa = PBXBuildFile; fileRef = 00CAF54814F74B350066B64F /* Shader-Test.fs */; };
+		00CAF55A14F74B350066B64F /* Shader-Test.vs in Sources */ = {isa = PBXBuildFile; fileRef = 00CAF54914F74B350066B64F /* Shader-Test.vs */; };
+		00CAF55B14F74B350066B64F /* Shader.vs in Sources */ = {isa = PBXBuildFile; fileRef = 00CAF54A14F74B350066B64F /* Shader.vs */; };
+		00CAF55C14F74B540066B64F /* Include.fs in Resources */ = {isa = PBXBuildFile; fileRef = 00CAF53A14F74B350066B64F /* Include.fs */; };
+		00CAF55D14F74B560066B64F /* Shader-Advance.fs in Resources */ = {isa = PBXBuildFile; fileRef = 00CAF53B14F74B350066B64F /* Shader-Advance.fs */; };
+		00CAF55E14F74B570066B64F /* Shader-Advance2.fs in Resources */ = {isa = PBXBuildFile; fileRef = 00CAF53C14F74B350066B64F /* Shader-Advance2.fs */; };
+		00CAF55F14F74B580066B64F /* Shader-BlurHorizontal.fs in Resources */ = {isa = PBXBuildFile; fileRef = 00CAF53D14F74B350066B64F /* Shader-BlurHorizontal.fs */; };
+		00CAF56014F74B590066B64F /* Shader-BlurVertical.fs in Resources */ = {isa = PBXBuildFile; fileRef = 00CAF53E14F74B350066B64F /* Shader-BlurVertical.fs */; };
+		00CAF56114F74B590066B64F /* Shader-Composite.fs in Resources */ = {isa = PBXBuildFile; fileRef = 00CAF53F14F74B350066B64F /* Shader-Composite.fs */; };
+		00CAF56214F74B5A0066B64F /* Shader-Composite2.fs in Resources */ = {isa = PBXBuildFile; fileRef = 00CAF54014F74B350066B64F /* Shader-Composite2.fs */; };
+		00CAF56314F74B5B0066B64F /* Shader-Composite3.fs in Resources */ = {isa = PBXBuildFile; fileRef = 00CAF54114F74B350066B64F /* Shader-Composite3.fs */; };
+		00CAF56414F74B5C0066B64F /* Shader-Copy.fs in Resources */ = {isa = PBXBuildFile; fileRef = 00CAF54214F74B350066B64F /* Shader-Copy.fs */; };
+		00CAF56514F74B5E0066B64F /* Shader-FluidAddMotion.fs in Resources */ = {isa = PBXBuildFile; fileRef = 00CAF54314F74B350066B64F /* Shader-FluidAddMotion.fs */; };
+		00CAF56614F74B5F0066B64F /* Shader-FluidAdvect.fs in Resources */ = {isa = PBXBuildFile; fileRef = 00CAF54414F74B350066B64F /* Shader-FluidAdvect.fs */; };
+		00CAF56714F74B610066B64F /* Shader-FluidDiv.fs in Resources */ = {isa = PBXBuildFile; fileRef = 00CAF54514F74B350066B64F /* Shader-FluidDiv.fs */; };
+		00CAF56814F74B620066B64F /* Shader-FluidInit.fs in Resources */ = {isa = PBXBuildFile; fileRef = 00CAF54614F74B350066B64F /* Shader-FluidInit.fs */; };
+		00CAF56914F74B640066B64F /* Shader-FluidP.fs in Resources */ = {isa = PBXBuildFile; fileRef = 00CAF54714F74B350066B64F /* Shader-FluidP.fs */; };
+		00CAF56A14F74B650066B64F /* Shader-Test.fs in Resources */ = {isa = PBXBuildFile; fileRef = 00CAF54814F74B350066B64F /* Shader-Test.fs */; };
+		00CAF56B14F74B660066B64F /* Shader-Test.vs in Resources */ = {isa = PBXBuildFile; fileRef = 00CAF54914F74B350066B64F /* Shader-Test.vs */; };
+		00CAF56C14F74B670066B64F /* Shader.vs in Resources */ = {isa = PBXBuildFile; fileRef = 00CAF54A14F74B350066B64F /* Shader.vs */; };
+		00D021FC154B6BB5003BAAC3 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 00D021FB154B6BB5003BAAC3 /* README.md */; };
+		00D248EB1500824D00AB9B7F /* TFFluidShader.m in Sources */ = {isa = PBXBuildFile; fileRef = 00D248EA1500824D00AB9B7F /* TFFluidShader.m */; };
+		00D248EE150084B900AB9B7F /* Shader-Default.fs in Sources */ = {isa = PBXBuildFile; fileRef = 00D248ED150084B900AB9B7F /* Shader-Default.fs */; };
+		00D248EF150085AF00AB9B7F /* Shader-Default.fs in Resources */ = {isa = PBXBuildFile; fileRef = 00D248ED150084B900AB9B7F /* Shader-Default.fs */; };
+		00D2490015009BB300AB9B7F /* Shader-DefaultComposite.fs in Sources */ = {isa = PBXBuildFile; fileRef = 00D248FF15009BB300AB9B7F /* Shader-DefaultComposite.fs */; };
+		00D2490115009BC100AB9B7F /* Shader-DefaultComposite.fs in Resources */ = {isa = PBXBuildFile; fileRef = 00D248FF15009BB300AB9B7F /* Shader-DefaultComposite.fs */; };
+		00E7809214F322B000FC4550 /* GHGLProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E7808214F322B000FC4550 /* GHGLProgram.m */; };
+		00E7809314F322B000FC4550 /* GHGLTexture.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E7808414F322B000FC4550 /* GHGLTexture.m */; };
+		00E7809414F322B000FC4550 /* GHGLUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E7808714F322B000FC4550 /* GHGLUtils.m */; };
+		00E7809514F322B000FC4550 /* GHTextureManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E7808A14F322B000FC4550 /* GHTextureManager.m */; };
+		00FB517C14F74D9500C0AEF7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 00FB517B14F74D9500C0AEF7 /* main.m */; };
+		00FB518614F74DC000C0AEF7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 00FB518414F74DC000C0AEF7 /* InfoPlist.strings */; };
+		00FB518914F74DC400C0AEF7 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00FB518714F74DC400C0AEF7 /* MainMenu.xib */; };
+		00FB51B114F74F4000C0AEF7 /* TFShader.m in Sources */ = {isa = PBXBuildFile; fileRef = 00FB51B014F74F4000C0AEF7 /* TFShader.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		000D82C314EB7FD000FE23D9 /* TuringFluid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TuringFluid.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		000D82C714EB7FD000FE23D9 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		000D82CA14EB7FD000FE23D9 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		000D82CB14EB7FD000FE23D9 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		000D82CC14EB7FD000FE23D9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		000D82D514EB7FD000FE23D9 /* TuringFluid-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TuringFluid-Prefix.pch"; sourceTree = "<group>"; };
+		000D831B14EB883D00FE23D9 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		000D831D14EB884F00FE23D9 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		0030305014F75ECC00A339F3 /* CocoaOpenNI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocoaOpenNI.h; sourceTree = "<group>"; };
+		0030305114F75ECC00A339F3 /* CocoaOpenNI.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CocoaOpenNI.mm; sourceTree = "<group>"; };
+		0030305214F75ECC00A339F3 /* SceneDrawer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneDrawer.h; sourceTree = "<group>"; };
+		0030305314F75ECC00A339F3 /* SceneDrawer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SceneDrawer.mm; sourceTree = "<group>"; };
+		0030305414F75ECC00A339F3 /* Shared.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Shared.cpp; sourceTree = "<group>"; };
+		0030305514F75ECC00A339F3 /* Shared.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shared.h; sourceTree = "<group>"; };
+		0030305A14F75F2B00A339F3 /* Config.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Config.xml; sourceTree = "<group>"; };
+		0030305C14F75F7D00A339F3 /* libOpenNI.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libOpenNI.dylib; path = usr/lib/libOpenNI.dylib; sourceTree = SDKROOT; };
+		0030305E14F75FEB00A339F3 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
+		005A1E9514F74CBD00F6DC0F /* TuringFluid-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TuringFluid-Info.plist"; sourceTree = SOURCE_ROOT; };
+		00CAF53314F74B100066B64F /* TFGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFGLView.h; sourceTree = SOURCE_ROOT; };
+		00CAF53414F74B100066B64F /* TFGLView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TFGLView.mm; sourceTree = SOURCE_ROOT; };
+		00CAF53514F74B100066B64F /* TFAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFAppDelegate.h; sourceTree = SOURCE_ROOT; };
+		00CAF53614F74B100066B64F /* TFAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFAppDelegate.m; sourceTree = SOURCE_ROOT; };
+		00CAF53A14F74B350066B64F /* Include.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Include.fs; sourceTree = "<group>"; };
+		00CAF53B14F74B350066B64F /* Shader-Advance.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = "Shader-Advance.fs"; sourceTree = "<group>"; };
+		00CAF53C14F74B350066B64F /* Shader-Advance2.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = "Shader-Advance2.fs"; sourceTree = "<group>"; };
+		00CAF53D14F74B350066B64F /* Shader-BlurHorizontal.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = "Shader-BlurHorizontal.fs"; sourceTree = "<group>"; };
+		00CAF53E14F74B350066B64F /* Shader-BlurVertical.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = "Shader-BlurVertical.fs"; sourceTree = "<group>"; };
+		00CAF53F14F74B350066B64F /* Shader-Composite.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = "Shader-Composite.fs"; sourceTree = "<group>"; };
+		00CAF54014F74B350066B64F /* Shader-Composite2.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = "Shader-Composite2.fs"; sourceTree = "<group>"; };
+		00CAF54114F74B350066B64F /* Shader-Composite3.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = "Shader-Composite3.fs"; sourceTree = "<group>"; };
+		00CAF54214F74B350066B64F /* Shader-Copy.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = "Shader-Copy.fs"; sourceTree = "<group>"; };
+		00CAF54314F74B350066B64F /* Shader-FluidAddMotion.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = "Shader-FluidAddMotion.fs"; sourceTree = "<group>"; };
+		00CAF54414F74B350066B64F /* Shader-FluidAdvect.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = "Shader-FluidAdvect.fs"; sourceTree = "<group>"; };
+		00CAF54514F74B350066B64F /* Shader-FluidDiv.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = "Shader-FluidDiv.fs"; sourceTree = "<group>"; };
+		00CAF54614F74B350066B64F /* Shader-FluidInit.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = "Shader-FluidInit.fs"; sourceTree = "<group>"; };
+		00CAF54714F74B350066B64F /* Shader-FluidP.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = "Shader-FluidP.fs"; sourceTree = "<group>"; };
+		00CAF54814F74B350066B64F /* Shader-Test.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = "Shader-Test.fs"; sourceTree = "<group>"; };
+		00CAF54914F74B350066B64F /* Shader-Test.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = "Shader-Test.vs"; sourceTree = "<group>"; };
+		00CAF54A14F74B350066B64F /* Shader.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Shader.vs; sourceTree = "<group>"; };
+		00D021FB154B6BB5003BAAC3 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		00D248E91500824D00AB9B7F /* TFFluidShader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFFluidShader.h; sourceTree = "<group>"; };
+		00D248EA1500824D00AB9B7F /* TFFluidShader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFFluidShader.m; sourceTree = "<group>"; };
+		00D248ED150084B900AB9B7F /* Shader-Default.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = "Shader-Default.fs"; sourceTree = "<group>"; };
+		00D248FF15009BB300AB9B7F /* Shader-DefaultComposite.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = "Shader-DefaultComposite.fs"; sourceTree = "<group>"; };
+		00E7807F14F322B000FC4550 /* GHGLCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHGLCommon.h; sourceTree = "<group>"; };
+		00E7808014F322B000FC4550 /* GHGLDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHGLDefines.h; sourceTree = "<group>"; };
+		00E7808114F322B000FC4550 /* GHGLProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHGLProgram.h; sourceTree = "<group>"; };
+		00E7808214F322B000FC4550 /* GHGLProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHGLProgram.m; sourceTree = "<group>"; };
+		00E7808314F322B000FC4550 /* GHGLTexture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHGLTexture.h; sourceTree = "<group>"; };
+		00E7808414F322B000FC4550 /* GHGLTexture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHGLTexture.m; sourceTree = "<group>"; };
+		00E7808514F322B000FC4550 /* GHGLUCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHGLUCommon.h; sourceTree = "<group>"; };
+		00E7808614F322B000FC4550 /* GHGLUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHGLUtils.h; sourceTree = "<group>"; };
+		00E7808714F322B000FC4550 /* GHGLUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHGLUtils.m; sourceTree = "<group>"; };
+		00E7808814F322B000FC4550 /* GHQuaternion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHQuaternion.h; sourceTree = "<group>"; };
+		00E7808914F322B000FC4550 /* GHTextureManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHTextureManager.h; sourceTree = "<group>"; };
+		00E7808A14F322B000FC4550 /* GHTextureManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHTextureManager.m; sourceTree = "<group>"; };
+		00FB517B14F74D9500C0AEF7 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = SOURCE_ROOT; };
+		00FB518514F74DC000C0AEF7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
+		00FB518814F74DC400C0AEF7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = SOURCE_ROOT; };
+		00FB51AF14F74F4000C0AEF7 /* TFShader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFShader.h; sourceTree = "<group>"; };
+		00FB51B014F74F4000C0AEF7 /* TFShader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFShader.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		000D82C014EB7FD000FE23D9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0030305F14F75FEB00A339F3 /* GLUT.framework in Frameworks */,
+				0030305D14F75F7D00A339F3 /* libOpenNI.dylib in Frameworks */,
+				000D831E14EB884F00FE23D9 /* CoreVideo.framework in Frameworks */,
+				000D831C14EB883D00FE23D9 /* OpenGL.framework in Frameworks */,
+				000D82C814EB7FD000FE23D9 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		000D82B814EB7FD000FE23D9 = {
+			isa = PBXGroup;
+			children = (
+				00D021FB154B6BB5003BAAC3 /* README.md */,
+				000D82CD14EB7FD000FE23D9 /* TuringFluid */,
+				00FB51AE14F74F4000C0AEF7 /* Classes */,
+				0030304F14F75ECC00A339F3 /* OpenNI */,
+				00CAF53914F74B350066B64F /* Shaders */,
+				00E7807E14F322B000FC4550 /* GHGLUtils */,
+				000D82C614EB7FD000FE23D9 /* Frameworks */,
+				000D82C414EB7FD000FE23D9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		000D82C414EB7FD000FE23D9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				000D82C314EB7FD000FE23D9 /* TuringFluid.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		000D82C614EB7FD000FE23D9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0030305E14F75FEB00A339F3 /* GLUT.framework */,
+				0030305C14F75F7D00A339F3 /* libOpenNI.dylib */,
+				000D831D14EB884F00FE23D9 /* CoreVideo.framework */,
+				000D831B14EB883D00FE23D9 /* OpenGL.framework */,
+				000D82C714EB7FD000FE23D9 /* Cocoa.framework */,
+				000D82C914EB7FD000FE23D9 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		000D82C914EB7FD000FE23D9 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				000D82CA14EB7FD000FE23D9 /* AppKit.framework */,
+				000D82CB14EB7FD000FE23D9 /* CoreData.framework */,
+				000D82CC14EB7FD000FE23D9 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		000D82CD14EB7FD000FE23D9 /* TuringFluid */ = {
+			isa = PBXGroup;
+			children = (
+				00CAF53314F74B100066B64F /* TFGLView.h */,
+				00CAF53414F74B100066B64F /* TFGLView.mm */,
+				00CAF53514F74B100066B64F /* TFAppDelegate.h */,
+				00CAF53614F74B100066B64F /* TFAppDelegate.m */,
+				000D82CE14EB7FD000FE23D9 /* Supporting Files */,
+			);
+			path = TuringFluid;
+			sourceTree = "<group>";
+		};
+		000D82CE14EB7FD000FE23D9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				00FB518714F74DC400C0AEF7 /* MainMenu.xib */,
+				00FB518414F74DC000C0AEF7 /* InfoPlist.strings */,
+				00FB517B14F74D9500C0AEF7 /* main.m */,
+				005A1E9514F74CBD00F6DC0F /* TuringFluid-Info.plist */,
+				000D82D514EB7FD000FE23D9 /* TuringFluid-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0030304F14F75ECC00A339F3 /* OpenNI */ = {
+			isa = PBXGroup;
+			children = (
+				0030305A14F75F2B00A339F3 /* Config.xml */,
+				0030305014F75ECC00A339F3 /* CocoaOpenNI.h */,
+				0030305114F75ECC00A339F3 /* CocoaOpenNI.mm */,
+				0030305214F75ECC00A339F3 /* SceneDrawer.h */,
+				0030305314F75ECC00A339F3 /* SceneDrawer.mm */,
+				0030305414F75ECC00A339F3 /* Shared.cpp */,
+				0030305514F75ECC00A339F3 /* Shared.h */,
+			);
+			name = OpenNI;
+			path = ../OpenNI;
+			sourceTree = "<group>";
+		};
+		00CAF53914F74B350066B64F /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				00CAF53A14F74B350066B64F /* Include.fs */,
+				00D248ED150084B900AB9B7F /* Shader-Default.fs */,
+				00CAF53B14F74B350066B64F /* Shader-Advance.fs */,
+				00CAF53C14F74B350066B64F /* Shader-Advance2.fs */,
+				00CAF53D14F74B350066B64F /* Shader-BlurHorizontal.fs */,
+				00CAF53E14F74B350066B64F /* Shader-BlurVertical.fs */,
+				00D248FF15009BB300AB9B7F /* Shader-DefaultComposite.fs */,
+				00CAF53F14F74B350066B64F /* Shader-Composite.fs */,
+				00CAF54014F74B350066B64F /* Shader-Composite2.fs */,
+				00CAF54114F74B350066B64F /* Shader-Composite3.fs */,
+				00CAF54214F74B350066B64F /* Shader-Copy.fs */,
+				00CAF54314F74B350066B64F /* Shader-FluidAddMotion.fs */,
+				00CAF54414F74B350066B64F /* Shader-FluidAdvect.fs */,
+				00CAF54514F74B350066B64F /* Shader-FluidDiv.fs */,
+				00CAF54614F74B350066B64F /* Shader-FluidInit.fs */,
+				00CAF54714F74B350066B64F /* Shader-FluidP.fs */,
+				00CAF54814F74B350066B64F /* Shader-Test.fs */,
+				00CAF54914F74B350066B64F /* Shader-Test.vs */,
+				00CAF54A14F74B350066B64F /* Shader.vs */,
+			);
+			name = Shaders;
+			path = ../Shaders;
+			sourceTree = SOURCE_ROOT;
+		};
+		00E7807E14F322B000FC4550 /* GHGLUtils */ = {
+			isa = PBXGroup;
+			children = (
+				00E7807F14F322B000FC4550 /* GHGLCommon.h */,
+				00E7808014F322B000FC4550 /* GHGLDefines.h */,
+				00E7808114F322B000FC4550 /* GHGLProgram.h */,
+				00E7808214F322B000FC4550 /* GHGLProgram.m */,
+				00E7808314F322B000FC4550 /* GHGLTexture.h */,
+				00E7808414F322B000FC4550 /* GHGLTexture.m */,
+				00E7808514F322B000FC4550 /* GHGLUCommon.h */,
+				00E7808614F322B000FC4550 /* GHGLUtils.h */,
+				00E7808714F322B000FC4550 /* GHGLUtils.m */,
+				00E7808814F322B000FC4550 /* GHQuaternion.h */,
+				00E7808914F322B000FC4550 /* GHTextureManager.h */,
+				00E7808A14F322B000FC4550 /* GHTextureManager.m */,
+			);
+			name = GHGLUtils;
+			path = ../../GHGLUtils;
+			sourceTree = "<group>";
+		};
+		00FB51AE14F74F4000C0AEF7 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				00FB51AF14F74F4000C0AEF7 /* TFShader.h */,
+				00FB51B014F74F4000C0AEF7 /* TFShader.m */,
+				00D248E91500824D00AB9B7F /* TFFluidShader.h */,
+				00D248EA1500824D00AB9B7F /* TFFluidShader.m */,
+			);
+			name = Classes;
+			path = ../Classes;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		000D82C214EB7FD000FE23D9 /* TuringFluid */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 000D82E114EB7FD000FE23D9 /* Build configuration list for PBXNativeTarget "TuringFluid" */;
+			buildPhases = (
+				000D82BF14EB7FD000FE23D9 /* Sources */,
+				000D82C014EB7FD000FE23D9 /* Frameworks */,
+				000D82C114EB7FD000FE23D9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TuringFluid;
+			productName = TuringFluid;
+			productReference = 000D82C314EB7FD000FE23D9 /* TuringFluid.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		000D82BA14EB7FD000FE23D9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 000D82BD14EB7FD000FE23D9 /* Build configuration list for PBXProject "TuringFluid" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 000D82B814EB7FD000FE23D9;
+			productRefGroup = 000D82C414EB7FD000FE23D9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				000D82C214EB7FD000FE23D9 /* TuringFluid */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		000D82C114EB7FD000FE23D9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00CAF55C14F74B540066B64F /* Include.fs in Resources */,
+				00CAF55D14F74B560066B64F /* Shader-Advance.fs in Resources */,
+				00CAF55F14F74B580066B64F /* Shader-BlurHorizontal.fs in Resources */,
+				00CAF56014F74B590066B64F /* Shader-BlurVertical.fs in Resources */,
+				00CAF55E14F74B570066B64F /* Shader-Advance2.fs in Resources */,
+				00CAF56214F74B5A0066B64F /* Shader-Composite2.fs in Resources */,
+				00CAF56414F74B5C0066B64F /* Shader-Copy.fs in Resources */,
+				00CAF56314F74B5B0066B64F /* Shader-Composite3.fs in Resources */,
+				00CAF56514F74B5E0066B64F /* Shader-FluidAddMotion.fs in Resources */,
+				00CAF56714F74B610066B64F /* Shader-FluidDiv.fs in Resources */,
+				00CAF56814F74B620066B64F /* Shader-FluidInit.fs in Resources */,
+				00CAF56A14F74B650066B64F /* Shader-Test.fs in Resources */,
+				00CAF56914F74B640066B64F /* Shader-FluidP.fs in Resources */,
+				00D248EF150085AF00AB9B7F /* Shader-Default.fs in Resources */,
+				00CAF56C14F74B670066B64F /* Shader.vs in Resources */,
+				00CAF56B14F74B660066B64F /* Shader-Test.vs in Resources */,
+				00D2490115009BC100AB9B7F /* Shader-DefaultComposite.fs in Resources */,
+				00CAF56614F74B5F0066B64F /* Shader-FluidAdvect.fs in Resources */,
+				00CAF56114F74B590066B64F /* Shader-Composite.fs in Resources */,
+				00FB518614F74DC000C0AEF7 /* InfoPlist.strings in Resources */,
+				00FB518914F74DC400C0AEF7 /* MainMenu.xib in Resources */,
+				0030305B14F75F2B00A339F3 /* Config.xml in Resources */,
+				00D021FC154B6BB5003BAAC3 /* README.md in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		000D82BF14EB7FD000FE23D9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00E7809214F322B000FC4550 /* GHGLProgram.m in Sources */,
+				00E7809314F322B000FC4550 /* GHGLTexture.m in Sources */,
+				00E7809414F322B000FC4550 /* GHGLUtils.m in Sources */,
+				00E7809514F322B000FC4550 /* GHTextureManager.m in Sources */,
+				00CAF53714F74B100066B64F /* TFGLView.mm in Sources */,
+				00CAF53814F74B100066B64F /* TFAppDelegate.m in Sources */,
+				00CAF54B14F74B350066B64F /* Include.fs in Sources */,
+				00CAF54C14F74B350066B64F /* Shader-Advance.fs in Sources */,
+				00CAF54D14F74B350066B64F /* Shader-Advance2.fs in Sources */,
+				00CAF54E14F74B350066B64F /* Shader-BlurHorizontal.fs in Sources */,
+				00CAF54F14F74B350066B64F /* Shader-BlurVertical.fs in Sources */,
+				00CAF55014F74B350066B64F /* Shader-Composite.fs in Sources */,
+				00CAF55114F74B350066B64F /* Shader-Composite2.fs in Sources */,
+				00CAF55214F74B350066B64F /* Shader-Composite3.fs in Sources */,
+				00CAF55314F74B350066B64F /* Shader-Copy.fs in Sources */,
+				00CAF55414F74B350066B64F /* Shader-FluidAddMotion.fs in Sources */,
+				00CAF55514F74B350066B64F /* Shader-FluidAdvect.fs in Sources */,
+				00CAF55614F74B350066B64F /* Shader-FluidDiv.fs in Sources */,
+				00CAF55714F74B350066B64F /* Shader-FluidInit.fs in Sources */,
+				00CAF55814F74B350066B64F /* Shader-FluidP.fs in Sources */,
+				00CAF55914F74B350066B64F /* Shader-Test.fs in Sources */,
+				00CAF55A14F74B350066B64F /* Shader-Test.vs in Sources */,
+				00CAF55B14F74B350066B64F /* Shader.vs in Sources */,
+				00FB517C14F74D9500C0AEF7 /* main.m in Sources */,
+				00FB51B114F74F4000C0AEF7 /* TFShader.m in Sources */,
+				0030305614F75ECD00A339F3 /* CocoaOpenNI.mm in Sources */,
+				0030305714F75ECD00A339F3 /* SceneDrawer.mm in Sources */,
+				0030305814F75ECD00A339F3 /* Shared.cpp in Sources */,
+				00D248EB1500824D00AB9B7F /* TFFluidShader.m in Sources */,
+				00D248EE150084B900AB9B7F /* Shader-Default.fs in Sources */,
+				00D2490015009BB300AB9B7F /* Shader-DefaultComposite.fs in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		00FB518414F74DC000C0AEF7 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				00FB518514F74DC000C0AEF7 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		00FB518714F74DC400C0AEF7 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				00FB518814F74DC400C0AEF7 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		000D82DF14EB7FD000FE23D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		000D82E014EB7FD000FE23D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		000D82E214EB7FD000FE23D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TuringFluid-Prefix.pch";
+				HEADER_SEARCH_PATHS = /usr/include/ni;
+				INFOPLIST_FILE = "TuringFluid-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		000D82E314EB7FD000FE23D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TuringFluid-Prefix.pch";
+				HEADER_SEARCH_PATHS = /usr/include/ni;
+				INFOPLIST_FILE = "TuringFluid-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		000D82BD14EB7FD000FE23D9 /* Build configuration list for PBXProject "TuringFluid" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				000D82DF14EB7FD000FE23D9 /* Debug */,
+				000D82E014EB7FD000FE23D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		000D82E114EB7FD000FE23D9 /* Build configuration list for PBXNativeTarget "TuringFluid" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				000D82E214EB7FD000FE23D9 /* Debug */,
+				000D82E314EB7FD000FE23D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 000D82BA14EB7FD000FE23D9 /* Project object */;
+}
