@@ -7,7 +7,7 @@
 
 #import <QuartzCore/CVDisplayLink.h>
 
-#import "TFShader.h"
+#import "TFTuringFluidShader.h"
 //#import "TFFluidShader.h"
 
 @interface TFGLView : NSOpenGLView {
@@ -22,7 +22,7 @@
   CGPoint _mouseD;
   CGPoint _oldMouse;
   
-  TFShader *_shader;
+  TFTuringFluidShader *_shader;
   //TFFluidShader *_shader;
 }
 

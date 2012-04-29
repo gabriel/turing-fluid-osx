@@ -65,7 +65,7 @@
 		00FB517C14F74D9500C0AEF7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 00FB517B14F74D9500C0AEF7 /* main.m */; };
 		00FB518614F74DC000C0AEF7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 00FB518414F74DC000C0AEF7 /* InfoPlist.strings */; };
 		00FB518914F74DC400C0AEF7 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00FB518714F74DC400C0AEF7 /* MainMenu.xib */; };
-		00FB51B114F74F4000C0AEF7 /* TFShader.m in Sources */ = {isa = PBXBuildFile; fileRef = 00FB51B014F74F4000C0AEF7 /* TFShader.m */; };
+		00FB51B114F74F4000C0AEF7 /* TFTuringFluidShader.m in Sources */ = {isa = PBXBuildFile; fileRef = 00FB51B014F74F4000C0AEF7 /* TFTuringFluidShader.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -127,8 +127,8 @@
 		00FB517B14F74D9500C0AEF7 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = SOURCE_ROOT; };
 		00FB518514F74DC000C0AEF7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
 		00FB518814F74DC400C0AEF7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = SOURCE_ROOT; };
-		00FB51AF14F74F4000C0AEF7 /* TFShader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFShader.h; sourceTree = "<group>"; };
-		00FB51B014F74F4000C0AEF7 /* TFShader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFShader.m; sourceTree = "<group>"; };
+		00FB51AF14F74F4000C0AEF7 /* TFTuringFluidShader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFTuringFluidShader.h; sourceTree = "<group>"; };
+		00FB51B014F74F4000C0AEF7 /* TFTuringFluidShader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFTuringFluidShader.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -280,8 +280,8 @@
 		00FB51AE14F74F4000C0AEF7 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				00FB51AF14F74F4000C0AEF7 /* TFShader.h */,
-				00FB51B014F74F4000C0AEF7 /* TFShader.m */,
+				00FB51AF14F74F4000C0AEF7 /* TFTuringFluidShader.h */,
+				00FB51B014F74F4000C0AEF7 /* TFTuringFluidShader.m */,
 				00D248E91500824D00AB9B7F /* TFFluidShader.h */,
 				00D248EA1500824D00AB9B7F /* TFFluidShader.m */,
 			);
@@ -396,7 +396,7 @@
 				00CAF55A14F74B350066B64F /* Shader-Test.vs in Sources */,
 				00CAF55B14F74B350066B64F /* Shader.vs in Sources */,
 				00FB517C14F74D9500C0AEF7 /* main.m in Sources */,
-				00FB51B114F74F4000C0AEF7 /* TFShader.m in Sources */,
+				00FB51B114F74F4000C0AEF7 /* TFTuringFluidShader.m in Sources */,
 				0030305614F75ECD00A339F3 /* CocoaOpenNI.mm in Sources */,
 				0030305714F75ECD00A339F3 /* SceneDrawer.mm in Sources */,
 				0030305814F75ECD00A339F3 /* Shared.cpp in Sources */,

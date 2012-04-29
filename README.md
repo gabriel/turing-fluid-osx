@@ -1,11 +1,14 @@
+Turing Fluid
+============
+
 OSX version of Turing Fluid demo: http://cake23.de/turing-fluid.html 
 
-Install libusb:
+Install libusb
 ==============
 
     brew install libusb --universal
 
-Install OpenNI:
+Install OpenNI
 ==============
 
     git clone https://github.com/OpenNI/OpenNI.git
@@ -18,7 +21,7 @@ Install OpenNI:
 
     sudo ln -s /usr/lib/libOpenNI.dylib /Applications/Xcode.app/Contents//Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/usr/lib/
 
-To enable Kinect:
+Enable Kinect
 ==============
 
 Set #define IsOpenNIEnabled (YES) in TFGLView.m.

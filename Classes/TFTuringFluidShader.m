@@ -1,22 +1,22 @@
 //
-//  TFShaderView.m
+//  TFTuringFluidShader.m
 //  TuringFluid
 //
 //  Created by Gabriel Handford on 2/23/12.
 //  Copyright (c) 2012 rel.me. All rights reserved.
 //
 
-#import "TFShader.h"
+#import "TFTuringFluidShader.h"
 
 #import "GHGLUtils.h"
 #import "GHTextureManager.h"
 
 #define SizeX (1024.0f)
 #define SizeY (768.0f)
-#define SimScale (2.0f)
-#define IsFluidEnabled (NO)
+#define SimScale (4.0f)
+#define IsFluidEnabled (YES)
 
-@implementation TFShader
+@implementation TFTuringFluidShader
 
 @synthesize mouse=_mouse, mouseD=_mouseD, viewSize=_viewSize;
 
@@ -33,7 +33,6 @@
 	[_progComposite release];
 	[_progBlurHorizontal release];
 	[_progBlurVertical release];
-  
 	[_progFluidInit release];
 	[_progFluidAddMotion release];
 	[_progFluidAdvect release];

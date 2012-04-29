@@ -1,5 +1,5 @@
 //
-//  TFShader.h
+//  TFTuringFluidShader.h
 //  TuringFluid
 //
 //  Created by Gabriel Handford on 2/23/12.
@@ -10,8 +10,10 @@
 #import "GHGLProgram.h"
 #import "GHGLTexture.h"
 
-
-@interface TFShader : NSObject {
+/*!
+ Turning fluid based shader.
+ */
+@interface TFTuringFluidShader : NSObject {
   GHGLProgram *_progTest;
   GLuint _frameBufferTest;
   GLuint _textureTest;

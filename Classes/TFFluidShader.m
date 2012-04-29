@@ -30,8 +30,8 @@
   [_prog release];
   [_progCopy release];
   [_progComposite release];
-  //[_progBlurVertical release];
-  //[_progBlurHorizontal release];
+  [_progBlurVertical release];
+  [_progBlurHorizontal release];
 	[_progFluidInit release];
 	[_progFluidAddMotion release];
 	[_progFluidAdvect release];

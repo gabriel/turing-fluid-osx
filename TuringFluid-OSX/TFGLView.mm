@@ -84,7 +84,7 @@ static CVReturn DisplayLinkCallback(CVDisplayLinkRef displayLink, const CVTimeSt
 }
 
 - (void)prepareOpenGL {
-  _shader = [[TFShader alloc] initWithViewSize:self.frame.size];
+  _shader = [[TFTuringFluidShader alloc] initWithViewSize:self.frame.size];
   [_shader prepareOpenGL];
   
   [self _openNI];
@@ -132,9 +132,6 @@ static CVReturn DisplayLinkCallback(CVDisplayLinkRef displayLink, const CVTimeSt
     }
     _shader.mouse = _mouse;
     _shader.mouseD = _mouseD;
-    if (_mouseD.x > 0 || _mouseD.y > 0) {
-      NSLog(@"Debug %0.1f, %0.1f", _mouseD.x, _mouseD.y);
-    }
   }
   
   [_shader draw];

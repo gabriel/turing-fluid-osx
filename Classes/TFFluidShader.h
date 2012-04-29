@@ -10,7 +10,9 @@
 #import "GHGLProgram.h"
 #import "GHGLTexture.h"
 
-
+/*!
+ Simple fluid based shader.
+ */
 @interface TFFluidShader : NSObject {
   
   GHGLProgram *_prog;
