@@ -3,6 +3,8 @@ Turing Fluid
 
 OSX version of @Flexi23's Turing Fluid demo: http://cake23.de/turing-fluid.html with Kinect support
 
+<iframe width="480" height="360" src="http://www.youtube.com/embed/jVktMGVhPoE" frameborder="0" allowfullscreen></iframe>
+
 Install libusb
 ==============
 
