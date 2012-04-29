@@ -1,7 +1,7 @@
 Turing Fluid
 ============
 
-OSX version of Turing Fluid demo: http://cake23.de/turing-fluid.html 
+OSX version of @Flexi23's Turing Fluid demo: http://cake23.de/turing-fluid.html with Kinect support
 
 Install libusb
 ==============
