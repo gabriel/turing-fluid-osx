@@ -19,7 +19,7 @@ Install OpenNI
     cd Platform/Linux/CreateRedist
     ./RedistMaker
 
-    cd Platform/Linux/Redist/OpenNI-Bin-Dev-MacOSX-v1.5.2.23
+    cd Platform/Linux/Redist/OpenNI-Bin-Dev-MacOSX-v1.5.4.0    # dir name may change
     sudo ./install.sh
 
     sudo ln -s /usr/lib/libOpenNI.dylib /Applications/Xcode.app/Contents//Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/usr/lib/
