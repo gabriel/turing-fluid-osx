@@ -9,6 +9,7 @@ Install libusb
 ==============
 
     brew install libusb --universal
+    brew install doxygen
 
 Install OpenNI
 ==============
